@@ -6,11 +6,6 @@ import { motion } from "framer-motion";
 import { ImageIcon, BarChart3, CloudRain, Layout } from "lucide-react";
 import { ProjectModal, type ProjectDetail } from "@/components/project-modal";
 
-import aiImageSystem from "@/assets/c__Users_15438_AppData_Roaming_Cursor_User_workspaceStorage_0cf4e4a1f6693903157252858b9e2cf9_images_image-37af0b91-20ce-4fdf-9820-9520ef164798.png";
-import d3DecisionTree from "@/assets/c__Users_15438_AppData_Roaming_Cursor_User_workspaceStorage_0cf4e4a1f6693903157252858b9e2cf9_images_image-fcfd8db1-950e-4c5d-8c4e-11b2d3de97db.png";
-import weatherForecast from "@/assets/c__Users_15438_AppData_Roaming_Cursor_User_workspaceStorage_0cf4e4a1f6693903157252858b9e2cf9_images______2026-03-12_210433-0729db16-9a89-4b82-a735-1259ae2b467d.png";
-import vueTaskManager from "@/assets/c__Users_15438_AppData_Roaming_Cursor_User_workspaceStorage_0cf4e4a1f6693903157252858b9e2cf9_images_VUE______-298bed6d-7cd2-494d-a6b0-2600d91fe073.png";
-
 const projects: ProjectDetail[] = [
   {
     id: "ai-image",
@@ -19,7 +14,7 @@ const projects: ProjectDetail[] = [
     icon: ImageIcon,
     tags: ["AI 产品", "深度学习"],
     coverBg: "from-violet-400 to-purple-600",
-    showcaseImage: aiImageSystem,
+    showcaseImage: "/images/project1.png",
     details: {
       background:
         "针对本地部署深度学习模型门槛高、Web端交互体验碎片的痛点，构建集修复与生成于一体的集成系统 。",
@@ -36,7 +31,7 @@ const projects: ProjectDetail[] = [
     icon: BarChart3,
     tags: ["数据可视化", "交互设计"],
     coverBg: "from-amber-400 to-orange-500",
-    showcaseImage: d3DecisionTree,
+    showcaseImage: "/images/project2.png",
     details: {
       background:
         "机器学习模型“黑盒化”导致其逻辑难以被理解，需要直观的可视化工具展示决策路径 。",
@@ -52,7 +47,7 @@ const projects: ProjectDetail[] = [
     icon: CloudRain,
     tags: ["大数据", "算法集成"],
     coverBg: "from-sky-400 to-blue-600",
-    showcaseImage: weatherForecast,
+    showcaseImage: "/images/project3.png",
     details: {
       background:
         "针对海量气象数据中的异常值干扰和长期依赖关系预测难点，提升天气预报的稳健性 。",
@@ -69,7 +64,7 @@ const projects: ProjectDetail[] = [
     icon: Layout,
     tags: ["B 端系统", "前端开发"],
     coverBg: "from-emerald-400 to-teal-600",
-    showcaseImage: vueTaskManager,
+    showcaseImage: "/images/project4.png",
     details: {
       background:
         "B 端系统在处理大规模任务数据时常出现状态同步延迟与交互卡顿 。",
@@ -82,7 +77,7 @@ const projects: ProjectDetail[] = [
 
 export function ProjectsSection() {
   const [selectedProject, setSelectedProject] = useState<ProjectDetail | null>(
-    null
+    null,
   );
   const [modalOpen, setModalOpen] = useState(false);
 
@@ -125,14 +120,14 @@ export function ProjectsSection() {
             >
               {/* Cover */}
               <div
-                className={`relative h-40 bg-gradient-to-br ${project.coverBg} 
-                overflow-hidden`}
+                className={`relative h-40 bg-gradient-to-br ${project.coverBg}
+                overflow-hidden rounded-t-2xl`}
               >
                 {project.showcaseImage && (
                   <img
                     src={project.showcaseImage}
                     alt={`${project.title} 封面图`}
-                    className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+                    className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105 rounded-t-2xl"
                   />
                 )}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />

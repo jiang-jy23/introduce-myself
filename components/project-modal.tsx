@@ -112,15 +112,15 @@ export function ProjectModal({ project, open, onOpenChange }: ProjectModalProps)
           <div className="mt-6">
             <h4 className="text-sm font-semibold text-foreground mb-3">成果展示</h4>
             {project.showcaseImage ? (
-              <div className="w-full rounded-xl overflow-hidden border border-neutral-200 bg-white">
-                <img 
-                  src={project.showcaseImage} 
+              <div className="w-full rounded-2xl overflow-hidden border border-neutral-200 bg-white">
+                <img
+                  src={project.showcaseImage}
                   alt={`${project.title} 成果截图`}
-                  className="w-full h-64 object-cover"
+                  className="w-full h-64 object-cover rounded-2xl"
                 />
               </div>
             ) : (
-              <div className="w-full h-48 rounded-xl bg-neutral-100 border-2 border-dashed border-neutral-300 
+              <div className="w-full h-48 rounded-2xl bg-neutral-100 border-2 border-dashed border-neutral-300
                 flex items-center justify-center">
                 <div className="text-center">
                   <ImageIcon className="w-10 h-10 text-neutral-400 mx-auto mb-2" />
