@@ -45,7 +45,7 @@ export function HeroSection() {
             </div>
           </motion.div>
 
-          {/* Right Avatar Placeholder */}
+          {/* Right Avatar */}
           <motion.div 
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
@@ -55,14 +55,14 @@ export function HeroSection() {
             <div className="relative">
               {/* Decorative rings */}
               <div className="absolute inset-0 rounded-full bg-gradient-to-br from-foreground/10 to-foreground/5 blur-2xl scale-110" />
-              
+
               {/* Avatar container */}
-              <div className="relative w-48 h-48 sm:w-64 sm:h-64 lg:w-80 lg:h-80 rounded-full bg-gradient-to-br from-foreground/5 to-foreground/10 border border-foreground/10 flex items-center justify-center shadow-xl shadow-foreground/5">
-                <User className="w-20 h-20 sm:w-24 sm:h-24 lg:w-32 lg:h-32 text-foreground/30" />
-                
-                {/* Subtle inner glow */}
-                <div className="absolute inset-4 rounded-full bg-background/50 backdrop-blur-sm border border-foreground/5" />
-                <User className="absolute w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 text-foreground/40" />
+              <div className="relative w-48 h-48 sm:w-64 sm:h-64 lg:w-80 lg:h-80 rounded-full overflow-hidden shadow-xl shadow-foreground/10 border border-white/70 bg-foreground/5">
+                <img
+                  src="/images/yy.jpg"
+                  alt="姚遥的个人头像"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
           </motion.div>
