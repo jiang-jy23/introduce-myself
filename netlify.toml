@@ -1,0 +1,6 @@
+# Netlify 构建配置（Next.js 由 Netlify 自动识别与打包）
+[build]
+  command = "npm run build"
+
+[build.environment]
+  NODE_VERSION = "20"
