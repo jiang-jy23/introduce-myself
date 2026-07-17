@@ -1,19 +1,28 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { motion } from "framer-motion"
-import { GraduationCap, Award, Users, Calendar, Target, TrendingUp } from "lucide-react"
+import { useState } from "react";
+
+import { motion } from "framer-motion";
+import {
+  Award,
+  Calendar,
+  GraduationCap,
+  Target,
+  TrendingUp,
+  Users,
+} from "lucide-react";
+
 import {
   Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
-} from "@/components/ui/dialog"
+} from "@/components/ui/dialog";
 
-type AboutModalType = "education" | "campus" | null
+type AboutModalType = "education" | "campus" | null;
 
 export function AboutSection() {
-  const [activeModal, setActiveModal] = useState<AboutModalType>(null)
+  const [activeModal, setActiveModal] = useState<AboutModalType>(null);
 
   return (
     <section id="about" className="py-20 md:py-28 px-6">
@@ -34,7 +43,6 @@ export function AboutSection() {
         </motion.div>
 
         <div className="grid gap-8 md:grid-cols-2">
-          {/* Education */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -52,7 +60,9 @@ export function AboutSection() {
                   <div className="w-10 h-10 rounded-xl bg-blue-500/10 flex items-center justify-center">
                     <GraduationCap className="w-5 h-5 text-blue-600" />
                   </div>
-                  <h3 className="text-lg font-semibold text-foreground">教育背景</h3>
+                  <h3 className="text-lg font-semibold text-foreground">
+                    教育背景
+                  </h3>
                 </div>
                 <span className="text-xs font-medium text-blue-600/90">
                   点击查看详情
@@ -84,7 +94,6 @@ export function AboutSection() {
             </button>
           </motion.div>
 
-          {/* Experience */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -102,7 +111,9 @@ export function AboutSection() {
                   <div className="w-10 h-10 rounded-xl bg-emerald-500/10 flex items-center justify-center">
                     <Users className="w-5 h-5 text-emerald-600" />
                   </div>
-                  <h3 className="text-lg font-semibold text-foreground">校园经历</h3>
+                  <h3 className="text-lg font-semibold text-foreground">
+                    校园经历
+                  </h3>
                 </div>
                 <span className="text-xs font-medium text-emerald-600/90">
                   点击查看详情
@@ -112,14 +123,13 @@ export function AboutSection() {
               <div className="space-y-3 text-sm text-foreground/75">
                 <div className="flex items-center gap-2 text-foreground/60">
                   <Calendar className="w-3.5 h-3.5" />
-                  <span>学生会宣传中心主编 · 2022.9 - 2023.10</span>
+                  <span>学生会宣传中心主编 | 2022.09 - 2023.10</span>
                 </div>
               </div>
             </button>
           </motion.div>
         </div>
 
-        {/* Detail Modal */}
         <Dialog
           open={activeModal !== null}
           onOpenChange={(open) => setActiveModal(open ? activeModal : null)}
@@ -133,7 +143,6 @@ export function AboutSection() {
 
             {activeModal === "education" && (
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
-                {/* 证书资质 */}
                 <div className="flex flex-col gap-3 p-4 rounded-xl bg-neutral-50 border border-neutral-100">
                   <h4 className="text-sm font-semibold text-foreground">
                     证书资质
@@ -149,15 +158,14 @@ export function AboutSection() {
                       普通话二乙
                     </span>
                     <span className="px-3 py-1.5 rounded-full bg-blue-50 text-blue-700">
-                      高中数学教资
+                      高中数学教师资格
                     </span>
                   </div>
                 </div>
 
-                {/* 主修课程 */}
                 <div className="flex flex-col gap-3 p-4 rounded-xl bg-neutral-50 border border-neutral-100">
                   <h4 className="text-sm font-semibold text-foreground">
-                    主修课程
+                    核心课程
                   </h4>
                   <div className="space-y-2 text-sm text-foreground/80">
                     <div className="flex items-center justify-between">
@@ -183,15 +191,14 @@ export function AboutSection() {
                   </div>
                 </div>
 
-                {/* 学术荣誉 */}
                 <div className="flex flex-col gap-3 p-4 rounded-xl bg-neutral-50 border border-neutral-100">
                   <h4 className="text-sm font-semibold text-foreground">
-                    学术荣誉
+                    学业表现
                   </h4>
                   <p className="text-sm text-foreground/75 leading-relaxed">
                     GPA <span className="font-semibold text-foreground">3.0</span>，
-                    全专业前 <span className="font-semibold text-foreground">25%</span>；
-                    在智能科学与技术专业方向具备扎实的数学基础与算法理论素养。
+                    专业排名前 <span className="font-semibold text-foreground">25%</span>。
+                    具备较扎实的数学基础、算法理解能力和工程实践意识。
                   </p>
                 </div>
               </div>
@@ -199,7 +206,6 @@ export function AboutSection() {
 
             {activeModal === "campus" && (
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
-                {/* 问题背景 */}
                 <div className="flex gap-3 p-4 rounded-xl bg-neutral-50 border border-neutral-100">
                   <div className="flex-shrink-0 mt-1">
                     <div className="w-8 h-8 rounded-lg bg-violet-100 flex items-center justify-center">
@@ -208,15 +214,14 @@ export function AboutSection() {
                   </div>
                   <div className="flex-1">
                     <h4 className="text-sm font-semibold text-foreground mb-1">
-                      问题背景
+                      工作背景
                     </h4>
                     <p className="text-sm text-foreground/75 leading-relaxed">
-                      校园活动（如思美节、文化节）传播维度单一，缺乏系统性的内容策略与多渠道覆盖，活动影响力和参与度难以稳定放大。
+                      校园活动宣传往往停留在单次发布层面，缺少系统化内容策划与多渠道传播，影响活动触达与参与效果。
                     </p>
                   </div>
                 </div>
 
-                {/* 我的角色 */}
                 <div className="flex gap-3 p-4 rounded-xl bg-neutral-50 border border-neutral-100">
                   <div className="flex-shrink-0 mt-1">
                     <div className="w-8 h-8 rounded-lg bg-blue-100 flex items-center justify-center">
@@ -228,12 +233,11 @@ export function AboutSection() {
                       我的角色
                     </h4>
                     <p className="text-sm text-foreground/75 leading-relaxed">
-                      担任学生会宣传中心主编，统筹活动整体传播策略，主导图文内容和短视频脚本的策划与产出，并对接校园及周边高校渠道，负责从内容创意到宣发执行的全流程。
+                      担任学生会宣传中心主编，负责活动传播策略、图文内容策划、短视频脚本设计与渠道协同，推进从创意到发布的完整流程。
                     </p>
                   </div>
                 </div>
 
-                {/* 成果数据 */}
                 <div className="flex gap-3 p-4 rounded-xl bg-neutral-50 border border-neutral-100">
                   <div className="flex-shrink-0 mt-1">
                     <div className="w-8 h-8 rounded-lg bg-emerald-100 flex items-center justify-center">
@@ -242,10 +246,10 @@ export function AboutSection() {
                   </div>
                   <div className="flex-1">
                     <h4 className="text-sm font-semibold text-foreground mb-1">
-                      成果数据
+                      成果总结
                     </h4>
                     <p className="text-sm text-foreground/75 leading-relaxed">
-                      撰写推文 30+ 篇、短视频脚本 10+ 条；拓展并维护多校宣传渠道，策划“转发集赞”“话题挑战”等互动玩法，实现内容多维度触达与传播数据的持续监测与优化。
+                      累计撰写推文 30 余篇、短视频脚本 10 余条，推动多平台内容分发与互动玩法落地，提升了活动曝光与参与反馈。
                     </p>
                   </div>
                 </div>
@@ -255,5 +259,5 @@ export function AboutSection() {
         </Dialog>
       </div>
     </section>
-  )
+  );
 }

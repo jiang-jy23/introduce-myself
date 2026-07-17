@@ -1,7 +1,6 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { User } from "lucide-react"
+import { motion } from "framer-motion";
 
 export function HeroSection() {
   return (
@@ -11,8 +10,7 @@ export function HeroSection() {
     >
       <div className="mx-auto max-w-7xl w-full">
         <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-12 lg:gap-16">
-          {/* Left Content */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -25,10 +23,9 @@ export function HeroSection() {
               智能科学与技术背景 | 前端开发与 AI 应用探索者
             </p>
             <p className="mt-6 text-base sm:text-lg leading-relaxed text-foreground/70 max-w-xl mx-auto lg:mx-0 text-pretty">
-              致力于通过数据洞察与交互技术，让复杂的 AI 模型变得触手可及。
+              关注生成式 AI、智能文档处理、NLP 与数据可视化方向，重视从模型能力到前端交互体验的完整落地。
             </p>
-            
-            {/* CTA Buttons */}
+
             <div className="mt-8 flex flex-wrap items-center justify-center lg:justify-start gap-4">
               <a
                 href="#projects"
@@ -45,18 +42,14 @@ export function HeroSection() {
             </div>
           </motion.div>
 
-          {/* Right Avatar */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
             className="flex-shrink-0"
           >
             <div className="relative">
-              {/* Decorative rings */}
               <div className="absolute inset-0 rounded-full bg-gradient-to-br from-foreground/10 to-foreground/5 blur-2xl scale-110" />
-
-              {/* Avatar container */}
               <div className="relative w-48 h-48 sm:w-64 sm:h-64 lg:w-80 lg:h-80 rounded-full overflow-hidden shadow-xl shadow-foreground/10 border border-white/70 bg-foreground/5">
                 <img
                   src="/images/yy.jpg"
@@ -69,5 +62,5 @@ export function HeroSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

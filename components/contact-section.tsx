@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { Mail, Phone, Github, Linkedin, Send } from "lucide-react"
-import Link from "next/link"
+import { motion } from "framer-motion";
+import { Github, Linkedin, Mail, Phone, Send } from "lucide-react";
+import Link from "next/link";
 
 export function ContactSection() {
   const contactInfo = [
@@ -18,7 +18,7 @@ export function ContactSection() {
       value: "178 6076 0900",
       href: "tel:17860760900",
     },
-  ]
+  ];
 
   const socialLinks = [
     {
@@ -31,7 +31,7 @@ export function ContactSection() {
       label: "LinkedIn",
       href: "https://linkedin.com",
     },
-  ]
+  ];
 
   return (
     <section id="contact" className="py-20 md:py-28 px-6">
@@ -47,7 +47,7 @@ export function ContactSection() {
             联系我
           </h2>
           <p className="mt-3 text-foreground/60">
-            期待与您的交流与合作
+            欢迎交流前端开发、AI 应用与项目合作
           </p>
         </motion.div>
 
@@ -59,13 +59,12 @@ export function ContactSection() {
           className="bg-white/60 backdrop-blur-sm rounded-2xl p-8 border border-foreground/5 shadow-sm"
         >
           <div className="grid gap-8 md:grid-cols-2">
-            {/* Contact Info */}
             <div className="space-y-6">
               <h3 className="text-lg font-semibold text-foreground flex items-center gap-2">
                 <Send className="w-4 h-4" />
                 联系方式
               </h3>
-              
+
               <div className="space-y-4">
                 {contactInfo.map((item) => (
                   <Link
@@ -87,12 +86,11 @@ export function ContactSection() {
               </div>
             </div>
 
-            {/* Social Links */}
             <div className="space-y-6">
               <h3 className="text-lg font-semibold text-foreground">
                 社交平台
               </h3>
-              
+
               <div className="flex gap-3">
                 {socialLinks.map((item) => (
                   <Link
@@ -107,14 +105,14 @@ export function ContactSection() {
                   </Link>
                 ))}
               </div>
-              
+
               <p className="text-sm text-foreground/50">
-                欢迎通过以上方式与我取得联系，我会尽快回复您的消息。
+                如果你对相关项目、实习合作或技术交流感兴趣，可以通过以上方式联系我，我会尽快回复。
               </p>
             </div>
           </div>
         </motion.div>
       </div>
     </section>
-  )
+  );
 }
