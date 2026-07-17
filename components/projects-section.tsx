@@ -25,6 +25,11 @@ const projects: ProjectDetail[] = [
     tags: ["Stable Diffusion", "FastAPI", "生成式 AI"],
     coverBg: "from-violet-400 to-fuchsia-600",
     showcaseImage: "/images/project1.png",
+    galleryImages: [
+      "/images/project1.png",
+      "/images/图像变换系统截图 (2).png",
+      "/images/project1 (2).png",
+    ],
     details: {
       background:
         "围绕图像修复、风格迁移与文生图需求，设计一个可本地部署、可在线交互的图像处理系统，降低模型体验门槛并验证生成式 AI 工程化落地流程。",
@@ -42,6 +47,12 @@ const projects: ProjectDetail[] = [
     icon: FileText,
     tags: ["FastAPI", "PaddleOCR", "Faiss"],
     coverBg: "from-sky-500 to-cyan-600",
+    showcaseImage: "/images/企业文档智能分类系统演示 (1).png",
+    galleryImages: [
+      "/images/企业文档智能分类系统演示 (1).png",
+      "/images/企业文档智能分类系统演示 (4).png",
+      "/images/企业文档智能分类系统演示 (5).png",
+    ],
     details: {
       background:
         "针对企业场景中 DOCX、PDF、XLSX 与图片文档种类多、检索效率低、人工分类成本高的问题，设计一套支持智能解析、分类与搜索的一体化文档管理系统。",
@@ -59,6 +70,12 @@ const projects: ProjectDetail[] = [
     icon: Brain,
     tags: ["HanLP", "BERT", "Flask"],
     coverBg: "from-emerald-400 to-teal-600",
+    showcaseImage: "/images/NLP系统演示截图 (5).png",
+    galleryImages: [
+      "/images/NLP系统演示截图 (5).png",
+      "/images/NLP系统演示截图 (7).png",
+      "/images/NLP系统演示截图 (6).png",
+    ],
     details: {
       background:
         "面向中文文本分析教学与实验场景，希望将分词、实体识别、分类、聚类与情感分析等常见任务整合进统一 Web 界面，降低模型实验与结果对比成本。",
@@ -77,6 +94,11 @@ const projects: ProjectDetail[] = [
     tags: ["D3.js", "文心一言 API", "交互可视化"],
     coverBg: "from-amber-400 to-orange-500",
     showcaseImage: "/images/project2.png",
+    galleryImages: [
+      "/images/project2.png",
+      "/images/知识图谱 (1).png",
+      "/images/知识图谱 (2).png",
+    ],
     details: {
       background:
         "针对传统模型决策逻辑不直观的问题，希望通过可视化方式展示“特征到分类结果”的路径，并探索将规则结构与大模型问答能力结合起来。",
@@ -94,6 +116,7 @@ const projects: ProjectDetail[] = [
     tags: ["PyTorch", "LSTM", "时间序列"],
     coverBg: "from-blue-400 to-indigo-600",
     showcaseImage: "/images/project3.png",
+    galleryImages: ["/images/project3.png"],
     details: {
       background:
         "针对气象数据中异常值干扰和长期依赖建模困难的问题，尝试使用深度学习方法提升降水等指标的时序预测稳定性。",
@@ -111,6 +134,7 @@ const projects: ProjectDetail[] = [
     tags: ["Vue 3", "Pinia", "前端工程"],
     coverBg: "from-neutral-500 to-slate-700",
     showcaseImage: "/images/project4.png",
+    galleryImages: ["/images/project4.png"],
     details: {
       background:
         "围绕多任务管理与协作场景，设计一个结构清晰、交互顺畅的前端系统，用于展示组件化开发与状态管理能力。",

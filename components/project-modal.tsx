@@ -19,6 +19,7 @@ export interface ProjectDetail {
   tags: string[];
   coverBg: string;
   showcaseImage?: string;
+  galleryImages?: string[];
   details: {
     background: string;
     role: string;
@@ -38,6 +39,13 @@ export function ProjectModal({
   onOpenChange,
 }: ProjectModalProps) {
   if (!project) return null;
+
+  const galleryImages =
+    project.galleryImages && project.galleryImages.length > 0
+      ? project.galleryImages
+      : project.showcaseImage
+        ? [project.showcaseImage]
+        : [];
 
   const detailItems = [
     {
@@ -141,13 +149,20 @@ export function ProjectModal({
             <h4 className="text-sm font-semibold text-foreground mb-3">
               成果展示
             </h4>
-            {project.showcaseImage ? (
-              <div className="w-full rounded-2xl overflow-hidden border border-neutral-200 bg-white">
-                <img
-                  src={project.showcaseImage}
-                  alt={`${project.title} 成果截图`}
-                  className="w-full max-h-[520px] object-contain bg-white"
-                />
+            {galleryImages.length > 0 ? (
+              <div className="grid gap-4 md:grid-cols-2">
+                {galleryImages.map((image, index) => (
+                  <div
+                    key={`${project.id}-gallery-${index}`}
+                    className="rounded-2xl overflow-hidden border border-neutral-200 bg-white shadow-sm"
+                  >
+                    <img
+                      src={image}
+                      alt={`${project.title} 成果截图 ${index + 1}`}
+                      className="w-full h-[220px] md:h-[260px] object-contain bg-white"
+                    />
+                  </div>
+                ))}
               </div>
             ) : (
               <div className="w-full h-48 rounded-2xl bg-neutral-100 border-2 border-dashed border-neutral-300 flex items-center justify-center">
