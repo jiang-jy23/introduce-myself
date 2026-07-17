@@ -7,6 +7,7 @@ import {
   BarChart3,
   Brain,
   CloudRain,
+  Network,
   FileText,
   ImageIcon,
   Layout,
@@ -85,6 +86,30 @@ const projects: ProjectDetail[] = [
     },
   },
   {
+    id: "chinese-cuisine-knowledge-graph",
+    period: "2025.10 - 2025.11",
+    title: "中华菜谱知识图谱构建与数据分析",
+    description:
+      "采集并清洗 1500+ 菜谱数据，构建包含 1990 个实体、4659 个关系的知识图谱，并完成查询验证与统计分析。",
+    icon: Network,
+    tags: ["Python 爬虫", "SQLite", "知识图谱"],
+    coverBg: "from-rose-400 to-orange-500",
+    showcaseImage: "/images/知识图谱 (2).png",
+    galleryImages: [
+      "/images/知识图谱 (2).png",
+      "/images/知识图谱 (1).png",
+      "/images/知识图谱 (3).png",
+    ],
+    details: {
+      background:
+        "围绕菜品推荐与饮食数据分析场景，希望从海量菜谱文本中抽取食材、烹饪方法等关键实体与关系，构建可查询、可分析的中华菜谱知识图谱。",
+      role:
+        "负责全流程实现，使用 Python 爬虫采集 1500+ 菜谱数据，通过正则表达式清洗文本，并以 SQLite 存储结构化结果；结合 NLP 方法抽取食材、菜系、烹饪方法等实体关系，使用 Cypher 查询对图谱结果进行验证。",
+      outcome:
+        "最终构建出包含 1990 个实体、4659 个关系的知识图谱，并完成食材使用频率、菜系分布等统计分析与可视化输出，可为后续“菜品推荐”等业务决策提供数据支撑。",
+    },
+  },
+  {
     id: "decision-tree-visualization",
     period: "2024.12",
     title: "决策树模型可视化",
@@ -94,11 +119,7 @@ const projects: ProjectDetail[] = [
     tags: ["D3.js", "文心一言 API", "交互可视化"],
     coverBg: "from-amber-400 to-orange-500",
     showcaseImage: "/images/project2.png",
-    galleryImages: [
-      "/images/project2.png",
-      "/images/知识图谱 (1).png",
-      "/images/知识图谱 (2).png",
-    ],
+    galleryImages: ["/images/project2.png"],
     details: {
       background:
         "针对传统模型决策逻辑不直观的问题，希望通过可视化方式展示“特征到分类结果”的路径，并探索将规则结构与大模型问答能力结合起来。",
