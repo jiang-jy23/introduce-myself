@@ -163,19 +163,28 @@ export function ProjectsSection() {
               className="group relative rounded-2xl bg-white border border-neutral-200/80 overflow-hidden cursor-pointer transition-all duration-300 ease-out hover:-translate-y-2 hover:shadow-2xl"
             >
               <div
-                className={`relative h-44 bg-gradient-to-br ${project.coverBg} overflow-hidden rounded-t-2xl`}
+                className={`relative h-56 bg-gradient-to-br ${project.coverBg} overflow-hidden rounded-t-2xl`}
               >
                 {project.showcaseImage && (
-                  <img
-                    src={project.showcaseImage}
-                    alt={`${project.title} 封面图`}
-                    className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105 rounded-t-2xl"
-                  />
+                  <>
+                    <img
+                      src={project.showcaseImage}
+                      alt=""
+                      aria-hidden="true"
+                      className="absolute inset-0 w-full h-full object-cover opacity-15 scale-110 blur-sm"
+                    />
+                    <img
+                      src={project.showcaseImage}
+                      alt={`${project.title} 封面图`}
+                      className="relative z-10 w-full h-full object-contain p-3 transition-transform duration-500 ease-out group-hover:scale-[1.02]"
+                    />
+                  </>
                 )}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/35 to-transparent" />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <project.icon className="w-16 h-16 text-white/40 drop-shadow-lg" />
-                </div>
+                {!project.showcaseImage && (
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <project.icon className="w-16 h-16 text-white/40 drop-shadow-lg" />
+                  </div>
+                )}
               </div>
 
               <div className="p-5">
