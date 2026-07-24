@@ -23,7 +23,7 @@ export function HeroSection() {
               智能科学与技术背景 | 前端开发与 AI 应用探索者
             </p>
             <p className="mt-6 text-base sm:text-lg leading-relaxed text-foreground/70 max-w-xl mx-auto lg:mx-0 text-pretty">
-              关注生成式 AI、智能文档处理、NLP 与数据可视化方向，重视从模型能力到前端交互体验的完整落地。
+              具备数据分析处理、前端开发与 AI 产品设计落地能力，熟悉 Prompt Engineering、AI Agent、NLP、知识图谱与智能文档处理，能够从需求拆解、原型设计到系统实现完成完整交付。
             </p>
 
             <div className="mt-8 flex flex-wrap items-center justify-center lg:justify-start gap-4">
